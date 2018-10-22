@@ -123,15 +123,6 @@
                     }
                 }
             } else {
-                switch (data.field.metadata) {
-                    case "List":
-                        name = /List$/.test(name) ? name : name + "List";
-                        break;
-                    case "Class":
-                    case "NullableClass":
-                        name = /Model$/.test(name) ? name : name + "Model";
-                        break;
-                }
                 key = key + data.field.shortName;
                 if (key && name) {
                     if (data.field.metadata == "Price") {
